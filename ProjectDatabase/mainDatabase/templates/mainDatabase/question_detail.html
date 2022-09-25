@@ -1,0 +1,28 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    
+<p>
+    <a class="btn btn-light" href="{% url 'mainDatabase_Question_list' %}">
+    Question Listing
+    </a>
+</p>
+    
+<table class="table">
+    <tr><td>mark</td><td>{{ object.mark }}</td></tr>
+    <tr><td>difficulty</td><td>{{ object.difficulty }}</td></tr>
+    <tr><td>title</td><td>{{ object.title }}</td></tr>
+    <tr><td>difficulty</td><td>{{ object.difficulty }}</td></tr>
+    <tr><td>id</td><td>{{ object.id }}</td></tr>
+    <tr><td>question</td><td>{{ object.question }}</td></tr>
+    <tr><td>subject</td><td>{{ object.subject }}</td></tr>
+    <tr><td>question</td><td>{{ object.question }}</td></tr>
+    <tr><td>created</td><td>{{ object.created }}</td></tr>
+    <tr><td>slug</td><td>{{ object.slug }}</td></tr>
+    <tr><td>answer</td><td>{{ object.answer }}</td></tr>
+    <tr><td>last_updated</td><td>{{ object.last_updated }}</td></tr>
+</table>
+<a class="btn btn-primary" href="{{object.get_update_url}}">Edit</a>
+
+{% endblock %}

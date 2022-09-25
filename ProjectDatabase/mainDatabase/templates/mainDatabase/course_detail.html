@@ -1,0 +1,24 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    
+<p>
+    <a class="btn btn-light" href="{% url 'mainDatabase_Course_list' %}">
+    Course Listing
+    </a>
+</p>
+    
+<table class="table">
+    <tr><td>course</td><td>{{ object.course }}</td></tr>
+    <tr><td>active</td><td>{{ object.active }}</td></tr>
+    <tr><td>created</td><td>{{ object.created }}</td></tr>
+    <tr><td>semester</td><td>{{ object.semester }}</td></tr>
+    <tr><td>department</td><td>{{ object.department }}</td></tr>
+    <tr><td>regulation</td><td>{{ object.regulation }}</td></tr>
+    <tr><td>last_updated</td><td>{{ object.last_updated }}</td></tr>
+    <tr><td>id</td><td>{{ object.id }}</td></tr>
+</table>
+<a class="btn btn-primary" href="{{object.get_update_url}}">Edit</a>
+
+{% endblock %}

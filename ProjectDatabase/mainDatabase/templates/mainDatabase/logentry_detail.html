@@ -1,0 +1,26 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    
+<p>
+    <a class="btn btn-light" href="{% url 'mainDatabase_logentry_list' %}">
+    logentry Listing
+    </a>
+</p>
+    
+<table class="table">
+    <tr><td>objectId</td><td>{{ object.objectId }}</td></tr>
+    <tr><td>objectRepr</td><td>{{ object.objectRepr }}</td></tr>
+    <tr><td>change_message</td><td>{{ object.change_message }}</td></tr>
+    <tr><td>actionFlag</td><td>{{ object.actionFlag }}</td></tr>
+    <tr><td>last_updated</td><td>{{ object.last_updated }}</td></tr>
+    <tr><td>id</td><td>{{ object.id }}</td></tr>
+    <tr><td>actionTime</td><td>{{ object.actionTime }}</td></tr>
+    <tr><td>user</td><td>{{ object.user }}</td></tr>
+    <tr><td>contentType</td><td>{{ object.contentType }}</td></tr>
+    <tr><td>created</td><td>{{ object.created }}</td></tr>
+</table>
+<a class="btn btn-primary" href="{{object.get_update_url}}">Edit</a>
+
+{% endblock %}

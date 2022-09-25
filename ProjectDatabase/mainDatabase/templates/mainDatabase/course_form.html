@@ -1,0 +1,50 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    
+<p>
+    <a class="btn btn-light" href="{% url 'mainDatabase_Course_list' %}">
+    Course Listing
+    </a>
+</p>
+    
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{form.errors}}
+  <div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="course">course: </label>
+  <input class="form-control col-sm-10" id="course" type="text" name="course" value="{{ object.course }}">
+  </div>
+  <div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="active">active: </label>
+  <input class="form-control col-sm-10" id="active" type="text" name="active" value="{{ object.active }}">
+  </div>
+  <div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="created">created: </label>
+  <input class="form-control col-sm-10" id="created" type="datetime-local" name="created" value="{{ object.created }}" disabled>
+  </div>
+  <div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="semester">semester: </label>
+  <input class="form-control col-sm-10" id="semester" type="number" name="semester" value="{{ object.semester }}">
+  </div>
+  <div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="department">department: </label>
+  <input class="form-control col-sm-10" id="department" type="text" name="department" value="{{ object.department }}">
+  </div>
+  <div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="regulation">regulation: </label>
+  <input class="form-control col-sm-10" id="regulation" type="text" name="regulation" value="{{ object.regulation }}">
+  </div>
+  <div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="last_updated">last_updated: </label>
+  <input class="form-control col-sm-10" id="last_updated" type="datetime-local" name="last_updated" value="{{ object.last_updated }}" disabled>
+  </div>
+  <div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="id">id: </label>
+  <input class="form-control col-sm-10" id="id" type="text" name="id" value="{{ object.id }}">
+  </div>
+  <input type="submit" value="Save" class="btn btn-primary">
+</form>
+
+{% endblock %}

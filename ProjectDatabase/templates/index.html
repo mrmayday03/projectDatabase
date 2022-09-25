@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="m-2"><h4>mainDatabase</h4></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'mainDatabase_Syllabus_list' %}">Syllabus Listing</a></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'mainDatabase_Question_list' %}">Question Listing</a></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'mainDatabase_User_list' %}">User Listing</a></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'mainDatabase_Course_list' %}">Course Listing</a></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'mainDatabase_Department_list' %}">Department Listing</a></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'mainDatabase_Faculties_list' %}">Faculties Listing</a></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'mainDatabase_Subject_list' %}">Subject Listing</a></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'mainDatabase_Group_list' %}">Group Listing</a></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'mainDatabase_markRange_list' %}">markRange Listing</a></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'mainDatabase_Permission_list' %}">Permission Listing</a></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'mainDatabase_contentType_list' %}">contentType Listing</a></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'mainDatabase_logentry_list' %}">logentry Listing</a></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'mainDatabase_AbstractUser_list' %}">AbstractUser Listing</a></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'mainDatabase_prevYearsQp_list' %}">prevYearsQp Listing</a></div>
+{% endblock %}
